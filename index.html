@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Election Results of 2024 - India</title>
   <link rel="stylesheet" href="css/home.css">
   <script src="Javascript/home.js"></script>
 </head>
-
+<!--Start of the header-->
 <header>
   <div class="logo">
-    <h2>logo</h2>
+    <h2>Elect-India</h2>
+    <button class="menu-btn">&#9776;</button>
   </div>
 
-<nav>
-  <ul>
-      <li><a href="#">Home</a></li>  
-      <li><a href="#">About ElectIndia</a></li>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Elect-India</a></li>
       <li><a href="#">Contact Us</a></li>
       <li><a href="#">Our Services</a></li>
       <li><a href="#">Advertise with us</a></li>
+    </ul>
+  </nav>
 
-  </ul>
-
-</nav>
-
-
-<style>
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-
-  header,
-  footer {
-    background-color: black;
-    color: white;
-    width: 100%;
-  }
-
-  header {
+  <style>
+    header {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    background-color: #40c9db; /* Additional color */
+    justify-content:space-between;
+    background-color: #40c9db;
+    padding: 10px 20px;
   }
 
   header h2 {
     font-size: 24px;
-    color: white; /* Ensuring the title color remains white */
+    color: white; 
+    /*margin: 0; #remove comment to remove default margin around header  */
   }
+
+
+  .menu-btn {
+    display: none;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+
+  }
+
 
   nav ul {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
   }
+  
 
   nav ul li {
     margin: 0 10px;
@@ -81,8 +82,50 @@
     font-size: 12px;
     padding: 15px;
     background-color: #40c9db; /* Additional color */
+    width: 97%;
+    color: white;
   }
-</style>
+
+  @media screen and (max-width: 480px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .menu-btn{
+      display: block;
+      margin: 10px auto;
+    }
+
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+
+    nav{
+      display: none;
+    }
+
+    nav.active {
+      display: block;
+    }
+
+    .contentbody {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+  }
+
+  /* 
+header and footer design end
+*/
+  </style>
 
 
 </header>
@@ -140,6 +183,21 @@
   </div>
 
 </body>
+
+<script>
+  document.querySelector('.menu-btn').addEventListener('click', function() {
+    document.querySelector('nav').classList.toggle('active');
+  });
+  
+  // Hide the menu when a navigation item is clicked
+  document.querySelectorAll('nav ul li a').forEach(item => {
+    item.addEventListener('click', () => {
+      document.querySelector('nav').classList.remove('active');
+    });
+  });
+  
+  </script>
+
 <footer>
   <h2>&copy; All Right Reserved</h2>
 </footer>
