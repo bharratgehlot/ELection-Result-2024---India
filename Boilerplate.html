@@ -98,15 +98,20 @@
 
 
     footer {
-      position: absolute;
+      position: fixed;
       bottom: 0;
       background-color: #40c9db;
       color: white;
-      text-align: center;
+
       font-size: 22px;
       padding: 15px;
       height: 20px; /* Set a fixed height for the footer */
       width: 100%;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     
 
@@ -154,9 +159,9 @@
     }
 
 
-      footer {
-        height: auto; /* Let footer height be determined by content */
-      }
+    footer {
+    position: relative; /* Change position to relative */
+  }
       .main-content {
         padding-top: 20px; /* Adjust top padding for smaller screens */
         padding-bottom: 20px; /* Adjust bottom padding for smaller screens */
