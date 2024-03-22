@@ -1,3 +1,3 @@
 function redirectToPage() {
-  window.location.href = 'Boilerplate.html';
+  window.location.href = 'recentnews.html';
 }
