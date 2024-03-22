@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include any additional CSS or meta tags here -->
+
+</head>
+
+
+
+
+
+
+
+
+<body>
+    <!-- Your content goes here -->
+    <header>
+      <div class="logo">
+        <h2>Elect-India</h2>
+        <button class="menu-btn">&#9776;</button>
+      </div>
+      
+
+        <nav>
+
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Elect-India</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Advertise with us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <style> 
+    /* Header and Footer Design */
+    header {
+
+      display: flex;
+      align-items: center;
+      justify-content:space-between;
+      background-color: #40c9db;
+      padding: 10px 20px;
+      height: 60px; /* Set a fixed height for the header */
+    }
+
+    header h2 {
+    font-size: 24px;
+    color: white; 
+    /*margin: 0; #remove comment to remove default margin around header  */
+  }
+
+    
+  .menu-btn {
+    display: none;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+
+  }
+
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    background-color: #4da8da; /* Hover color */
+  }
+
+
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      background-color: #40c9db;
+      color: white;
+      text-align: center;
+      font-size: 22px;
+      padding: 15px;
+      height: 20px; /* Set a fixed height for the footer */
+      width: 100%;
+    }
+    
+
+
+
+
+
+
+    /* Main Content Area */
+    .main-content {
+      padding: 20px;
+      /* Adjust top and bottom padding to accommodate header and footer */
+      padding-top: 80px; /* Header height (60px) + additional padding (20px) */
+      padding-bottom: 60px; /* Footer height (40px) + additional padding (20px) */
+    }
+    
+    /* Media Queries for Responsive Design */
+    @media screen and (max-width: 768px) {
+      header {
+        height: auto; /* Let header height be determined by content */
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .menu-btn{
+      display: block;
+      margin: 10px auto;
+    }
+
+
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+
+    nav{
+      display: none;
+    }
+
+    nav.active {
+      display: block;
+    }
+
+
+      footer {
+        height: auto; /* Let footer height be determined by content */
+      }
+      .main-content {
+        padding-top: 20px; /* Adjust top padding for smaller screens */
+        padding-bottom: 20px; /* Adjust bottom padding for smaller screens */
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+    }
+    
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<!-- MAIN BODY GOES HERE ----   Make sure not to overlap any header footer classes and styles-->
+
+
+
+    <main>
+        <section>
+            <h2>Section 1</h2>
+            <p>This is section 1 content.</p>
+        </section>
+        <section>
+            <h2>Section 2</h2>
+            <p>This is section 2 content.</p>
+        </section>
+        <!-- Include more sections as needed -->
+    </main>
+
+
+<!-- MAIN BODY ENDS HERE ----   Make sure not to overlap any header footer classes and styles-->
+
+
+
+
+
+
+    <footer>
+        <p>&copy; Elect-India 2024</p>
+    </footer>
+
+    <script>
+ <!-- Include any additional scripts or JavaScript libraries here -->
+ document.querySelector('.menu-btn').addEventListener('click', function() {
+  document.querySelector('nav').classList.toggle('active');
+});
+
+// Hide the menu when a navigation item is clicked
+document.querySelectorAll('nav ul li a').forEach(item => {
+  item.addEventListener('click', () => {
+    document.querySelector('nav').classList.remove('active');
+  });
+});
+
+    </script>
+   
+</body>
+</html>
