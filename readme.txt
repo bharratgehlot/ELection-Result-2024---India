@@ -1,1 +1,0 @@
-website colors - #40c9db;
